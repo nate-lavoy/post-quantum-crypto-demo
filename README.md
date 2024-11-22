@@ -8,24 +8,38 @@
 
 - Need to have [liboqs-python](https://github.com/open-quantum-safe/liboqs-python) wrapper in your path
 
--python requirements: oqs, cryptography
+- python requirements: oqs, cryptography
 
 ## Usage
 
-- run setup (cleans up workspace and creates requester's public/private keys)
-'python3 setup.py'
+### 1) Run setup
 
-- encrypt the file:
-'python3 encrypt.py {plaintext file}'
+```bash
+python3 setup.py
+```
 
-the encrypted file will be saved as {plaintext file}.encrypted
+  cleans up workspace and creates requester's public/private keys
 
-- decrypt the file:
-'python3 decrypt.py'
+### 2) Encrypt the file:
 
-the decrypted file will be saved as {plaintext file}.decrypted
+```bash
+python3 encrypt.py {plaintext file}
+```
 
-- clean up files (all secrets, keys, and encrypted/decrypted files)
-'python3 cleanup.py'
+  the encrypted file will be saved as {plaintext file}.encrypted
 
-this is also automatically run every time setup.py is run
+### 3) Decrypt the file:
+
+```bash
+python3 decrypt.py
+```
+
+  the decrypted file will be saved as {plaintext file}.decrypted
+
+### 4) Clean up files (all secrets, keys, and encrypted/decrypted files)
+
+```bash
+python3 cleanup.py
+```
+
+  this is also automatically run every time setup.py is run
