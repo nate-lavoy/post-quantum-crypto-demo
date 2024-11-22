@@ -1,0 +1,32 @@
+Employee Records
+=================
+
+Name: Alice Johnson
+SSN: 123-45-6789
+Position: Software Engineer
+Salary: $120,000
+Address: 1234 Elm Street, Springfield, IL
+
+Name: Bob Smith
+SSN: 987-65-4321
+Position: Data Analyst
+Salary: $95,000
+Address: 5678 Oak Avenue, Madison, WI
+
+Name: Carol Davis
+SSN: 555-44-3333
+Position: HR Manager
+Salary: $110,000
+Address: 910 Pine Road, Austin, TX
+
+Name: David Lee
+SSN: 444-33-2222
+Position: IT Administrator
+Salary: $85,000
+Address: 789 Maple Lane, Seattle, WA
+
+Name: Emma Wilson
+SSN: 222-11-0000
+Position: Marketing Specialist
+Salary: $90,000
+Address: 345 Birch Drive, Denver, CO
