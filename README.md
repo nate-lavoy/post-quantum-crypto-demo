@@ -7,3 +7,5 @@
 - Uses Kyber1024 for key encapsulation and AES-256 for encryption
 
 - Need to have [liboqs-python](https://github.com/open-quantum-safe/liboqs-python) wrapper in your path
+
+-python requirements: oqs, cryptography
