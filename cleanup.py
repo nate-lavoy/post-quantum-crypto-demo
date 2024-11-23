@@ -1,7 +1,7 @@
 import os
 import glob
 
-# cleanup
+#cleanup
 generated_files = [
     # Original Kyber files
     "public_key.bin",
@@ -34,8 +34,8 @@ def cleanup():
             print(f"Error removing {file}: {e}")
 
     # Remove files matching patterns
-    for pattern in enc_dec:
-        for file in glob.glob(pattern):
+    for match in enc_dec:
+        for file in glob.glob(match):
             try:
                 os.remove(file)
                 print(f"Removed {file}")
@@ -45,4 +45,5 @@ def cleanup():
     print("Cleanup completed.")
 
 if __name__ == "__main__":
+    print("Cleaning up old files.")
     cleanup()
