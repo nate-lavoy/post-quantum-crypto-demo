@@ -1,3 +1,4 @@
+# Simulates the receiver (keys were generated in setup.py)
 from cryptography.hazmat.primitives.ciphers import Cipher, algorithms, modes
 from cryptography.hazmat.primitives.asymmetric import rsa, padding
 from cryptography.hazmat.primitives import hashes, serialization
@@ -6,13 +7,16 @@ import os
 import glob
 from ctypes import create_string_buffer
 
-encrypted_file_pattern = "*.encrypted"
+encrypted_file_pattern = "*.encrypted"# Match any file ending with .encrypted
+
+# Find the encrypted file dynamically
 encrypted_files = glob.glob(encrypted_file_pattern)
 
 if not encrypted_files:
     print(f"No encrypted files found matching pattern '{encrypted_file_pattern}'.")
     exit(1)
 
+# Use the first matching encrypted file
 encrypted_file = encrypted_files[0]
 decrypted_file = encrypted_file.replace(".encrypted", ".decrypted")
 
@@ -57,10 +61,10 @@ hasher = hashes.Hash(hashes.SHA256())
 hasher.update(combined_secret)
 symmetric_key = hasher.finalize()
 
-# Decrypt the file
+# Decrypt the HR file
 with open(encrypted_file, "rb") as f:
-    init_vec = f.read(16)
-    encrypted_data = f.read()
+    init_vec = f.read(16) # we saved the iv as first 16 bytes of the file
+    encrypted_data = f.read() # the rest is the ciphertext
 
 cipher = Cipher(algorithms.AES(symmetric_key), modes.CFB(init_vec))
 decryptor = cipher.decryptor()
