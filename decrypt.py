@@ -7,7 +7,7 @@ import os
 import glob
 from ctypes import create_string_buffer
 
-encrypted_file_pattern = "*.encrypted"# Match any file ending with .encrypted
+encrypted_file_pattern = "*.encrypted" # Match any file ending with .encrypted
 
 # Find the encrypted file dynamically
 encrypted_files = glob.glob(encrypted_file_pattern)
@@ -20,7 +20,7 @@ if not encrypted_files:
 encrypted_file = encrypted_files[0]
 decrypted_file = encrypted_file.replace(".encrypted", ".decrypted")
 
-post_quantum_algorithm = "Kyber1024"
+post_quantum_algorithm = "Kyber1024" 
 
 # Load the Kyber private key
 with open("private_key.bin", "rb") as priv_key_file:

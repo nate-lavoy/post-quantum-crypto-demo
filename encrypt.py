@@ -1,3 +1,4 @@
+# Simulates the sender (the public key was shared by receiever)
 from cryptography.hazmat.primitives.ciphers import Cipher, algorithms, modes
 from cryptography.hazmat.primitives.asymmetric import rsa, padding
 from cryptography.hazmat.primitives import hashes, serialization
@@ -10,7 +11,9 @@ if len(sys.argv) != 2:
     print("Usage: python3 encrypt.py <file_to_encrypt>")
     sys.exit(1)
 
+# Get the input file from the command-line argument
 input_file = sys.argv[1]
+# Ensure the file exists
 if not os.path.exists(input_file):
     print(f"Error: File '{input_file}' does not exist.")
     sys.exit(1)
@@ -74,16 +77,16 @@ hasher = hashes.Hash(hashes.SHA256())
 hasher.update(combined_secret)
 symmetric_key = hasher.finalize()
 
-# Encrypt the file
+# Encrypt the HR file
 with open(input_file, "rb") as f:
     plaintext = f.read()
 
-init_vec = os.urandom(16)
+init_vec = os.urandom(16) # Initialization vector for AES
 cipher = Cipher(algorithms.AES(symmetric_key), modes.CFB(init_vec))
 encryptor = cipher.encryptor()
 ciphertext = encryptor.update(plaintext) + encryptor.finalize()
 
-# Save the IV and ciphertext
+# Save the IV and ciphertext to a file
 with open(output_file, "wb") as f:
     f.write(init_vec + ciphertext)
 
