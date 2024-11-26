@@ -45,6 +45,42 @@ def get_current_user(access_token):
     else:
         print("Failed to retrieve user info:", response.status_code, response.json())
 
+# Step 4: Update user information
+def update_user_info(access_token):
+    url = f"{BASE_URL}/me/info"
+    headers = {"Authorization": f"Bearer {access_token}", "Content-Type": "application/json"}
+    
+    # Example personal information to update
+    data = {
+        "first_name": "John",
+        "last_name": "Doe",
+        "age": 30,
+        "sex": "Male",
+        "sexual_orientation": "Heterosexual",
+        "preferred_pronouns": "He/Him",
+        "phone_number": "+1234567890",
+        "ssn": "123-45-6789"
+    }
+    
+    response = requests.put(url, json=data, headers=headers)
+    
+    if response.status_code == 200:
+        print("User information updated successfully:", response.json())
+    else:
+        print("Failed to update user information:", response.status_code, response.json())
+
+# Step 5: Get user information
+def get_user_info(access_token):
+    url = f"{BASE_URL}/me/info"
+    headers = {"Authorization": f"Bearer {access_token}"}
+    
+    response = requests.get(url, headers=headers)
+    
+    if response.status_code == 200:
+        print("User personal information retrieved successfully:", response.json())
+    else:
+        print("Failed to retrieve user personal information:", response.status_code, response.json())
+
 # Execute the flow
 if __name__ == "__main__":
     # Step 1: Sign up (optional, skip if user already exists)
@@ -56,3 +92,9 @@ if __name__ == "__main__":
     # Step 3: Use the token to access protected resources
     if token:
         get_current_user(token)
+        
+        # Step 4: Update user information
+        update_user_info(token)
+        
+        # Step 5: Get user information
+        get_user_info(token)
