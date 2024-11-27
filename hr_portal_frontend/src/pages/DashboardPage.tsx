@@ -1,11 +1,16 @@
 import { Layout, Menu } from 'antd';
 import { Link } from 'react-router-dom';
+import './DashboardPage.css'; // Import the custom CSS file
+
+const { Sider, Content } = Layout;
 
 const DashboardPage = () => {
   return (
-    <Layout style={{ height: '100vh' }}>
-      <Layout.Sider>
-        <Menu theme="dark">
+    <Layout className="dashboard-container">
+      {/* Sidebar */}
+      <Sider className="dashboard-sider">
+        <div className="dashboard-logo">NYU HR</div>
+        <Menu theme="dark" mode="inline" className="dashboard-menu">
           <Menu.Item key="1">
             <Link to="/dashboard">Home</Link>
           </Menu.Item>
@@ -13,10 +18,13 @@ const DashboardPage = () => {
             <Link to="/user-info">User Info</Link>
           </Menu.Item>
         </Menu>
-      </Layout.Sider>
-      <Layout.Content style={{ padding: '20px' }}>
-        <h1>Hello User</h1>
-      </Layout.Content>
+      </Sider>
+
+      {/* Main Content */}
+      <Content className="dashboard-content">
+        <h1 className="dashboard-title">Welcome to Your Dashboard</h1>
+        <p className="dashboard-description">Here you can manage your account and view information.</p>
+      </Content>
     </Layout>
   );
 };

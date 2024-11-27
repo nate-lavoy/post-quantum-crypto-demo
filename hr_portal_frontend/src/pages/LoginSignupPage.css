@@ -1,0 +1,72 @@
+/* Center the container */
+.login-signup-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+    width: 100vw; /* Full viewport width (corrected from 100vb to 100vw) */
+    background: linear-gradient(135deg, #f5f7fa, #c3cfe2); /* Subtle gradient background */
+  }
+  
+  /* Style the card */
+  .login-signup-card {
+    background-color: #ffffff; /* White card background */
+    padding: 30px;
+    border-radius: 12px; /* Rounded corners */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    width: 100%;
+    max-width: 400px; /* Limit width for responsiveness */
+  }
+  
+  /* Customize Ant Design Tabs */
+  .custom-tabs .ant-tabs-nav {
+    margin-bottom: 20px;
+  }
+  
+  .custom-tabs .ant-tabs-tab {
+    font-size: 16px; /* Slightly larger font size */
+  }
+  
+  .custom-tabs .ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn {
+    color: #1890ff; /* Primary color for active tab */
+  }
+  
+  .custom-tabs .ant-tabs-ink-bar {
+    background-color: #1890ff; /* Match ink bar with active tab color */
+  }
+  
+  /* Add animation to form transitions */
+  .ant-tabs-content-holder {
+    transition: all 0.3s ease-in-out;
+  }
+  
+  /* Responsive design for smaller screens */
+  @media (max-width: 480px) {
+    .login-signup-card {
+      padding: 20px;
+      width: calc(100% - 40px); /* Add some margin on smaller screens */
+      box-shadow: none; /* Remove shadow for minimalistic look */
+      border-radius: 8px; /* Slightly reduce border radius */
+    }
+  }
+
+/* Title Styling */
+.login-signup-title {
+    font-size: 2.5rem; /* Large font size */
+    font-weight: bold; /* Bold text */
+    text-align: center; /* Center the title */
+    margin-bottom: 20px; /* Add spacing below the title */
+    background: linear-gradient(135deg, #1890ff, #ff4d4f); /* Gradient text */
+    -webkit-background-clip: text; /* Clip background to text */
+    background-clip: text;
+    -webkit-text-fill-color: transparent; /* Make text transparent to show gradient */
+    font-family: 'Arial', sans-serif; /* Clean font */
+  }
+  
+  /* Responsive Design for Small Screens */
+  @media (max-width: 480px) {
+    .login-signup-title {
+      font-size: 2rem; /* Slightly smaller font size on small screens */
+      margin-bottom: 15px;
+    }
+  }
