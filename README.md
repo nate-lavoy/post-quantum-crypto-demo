@@ -287,7 +287,32 @@ Removes all generated keys, secrets, and encrypted/decrypted files.
 - Keys and secrets are automatically managed and cleaned up
 - The system uses a common API for post-quantum algorithms, making it easy to switch between different quantum-safe schemes
 
+## Application Screenshots
 
+<p>Login/Signup Page</p>
+<div align="center">
+<img src="screenshots/login_signup.png" width="600" alt="Login Screen"/>
+</div>
+
+<p>Dashboard Page</p>
+<div align="center">
+<img src="screenshots/dashboard.png" width="600" alt="Dashboard"/>
+</div>
+
+<p>User Information Page (when user has no information in the database)</p>
+<div align="center">
+<img src="screenshots/userinfo1.png" width="600" alt="User Information"/>
+</div>
+
+<p>User Information Page prompting user to give the private key to view the data (when user has information in the database)</p>
+<div align="center">
+<img src="screenshots/userinfo3.png" width="600" alt="User Information private key prompt"/>
+</div>
+
+<p>User Information Page showing user info after successful decryption (when user has information in the database)</p>
+<div align="center">
+<img src="screenshots/userinfo2.png" width="600" alt="User Information after submission"/>
+</div>
 ## Contributing
 
 1. Fork the repository
