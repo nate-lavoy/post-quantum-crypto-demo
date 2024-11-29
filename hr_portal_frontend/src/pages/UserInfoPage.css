@@ -1,20 +1,30 @@
-/* src/pages/UserInfoPage.css */
+/* UserInfoPage.css */
 .user-info-container {
-  max-width: 600px;
-  margin: 2rem auto;
-  padding: 0 1rem;
+  height: 100vh;
+  background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .user-info-card {
-  background: white;
-  padding: 2rem;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 40px;
+  width: 100%;
+  max-width: 600px;
 }
 
 .user-info-title {
-  margin-bottom: 2rem;
+  font-size: 2.5rem;
+  font-weight: bold;
   text-align: center;
+  margin-bottom: 20px;
+  background: linear-gradient(135deg, #1890ff, #ff4d4f);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .decrypt-form {
@@ -71,4 +81,26 @@
 
 .ant-alert-description {
   margin-top: 0.5rem;
+}
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 480px) {
+  .user-info-card {
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: none;
+    width: calc(100% - 40px);
+    margin-top: auto;
+    margin-bottom: auto;
+    height: auto;
+    overflow-y: auto;
+    max-height: calc(100vh - 40px);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .user-info-title {
+    font-size: 2rem;
+  }
 }

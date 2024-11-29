@@ -70,3 +70,29 @@
       margin-bottom: 15px;
     }
   }
+
+  .error-message {
+    color: #ff4d4f;
+    text-align: center;
+    margin-bottom: 16px;
+    padding: 8px;
+    background-color: #fff2f0;
+    border: 1px solid #ffccc7;
+    border-radius: 4px;
+  }
+  
+  /* Animation for error message */
+  .error-message {
+    animation: fadeIn 0.3s ease-in;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
