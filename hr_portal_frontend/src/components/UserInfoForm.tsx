@@ -17,6 +17,10 @@ const UserInfoForm: React.FC<UserInfoFormProps> = ({
     }
   }, [data, form]);
 
+  const handleSubmit = (values: UserData) => {
+    onSubmit(values);
+  };
+
   const handleCancel = () => {
     form.setFieldsValue(data || {});
     setIsEditing(false);
@@ -58,10 +62,8 @@ const UserInfoForm: React.FC<UserInfoFormProps> = ({
     <Form
       form={form}
       layout="vertical"
-      onFinish={(values: UserData) => {
-        onSubmit(values);
-        setIsEditing(false);
-      }}
+      onFinish={handleSubmit}
+      initialValues={data || {}}
     >
       {formItems.map(item => (
         <Form.Item
@@ -72,7 +74,7 @@ const UserInfoForm: React.FC<UserInfoFormProps> = ({
         >
           <Input
             type={item.inputType || "text"}
-            disabled={!isEditing}
+            disabled={!isEditing || isLoading}
           />
         </Form.Item>
       ))}

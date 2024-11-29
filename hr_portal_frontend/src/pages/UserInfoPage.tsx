@@ -64,15 +64,18 @@ const UserInfoPage = () => {
       const token = sessionStorage.getItem('jwt');
       if (!token) throw new Error('JWT token not found. Please log in again.');
 
-      const response = await updateUserInfo(token, values);
-      
-      if (response.data.private_key) {
-        setNewPrivateKey(response.data.private_key);
+      if (JSON.stringify(values) !== JSON.stringify(userData)) {
+        const response = await updateUserInfo(token, values);
+        
+        if (response.data.private_key) {
+          setNewPrivateKey(response.data.private_key);
+        }
+        
+        message.success('Profile updated successfully');
       }
       
       setUserData(values);
       setError(null);
-      message.success('Profile updated successfully');
     } catch (err: any) {
       console.error('Error updating user info:', err);
       setError(err.response?.data?.detail || err.message);
