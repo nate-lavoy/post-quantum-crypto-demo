@@ -1,58 +1,74 @@
-/* Container Styling */
+/* src/pages/UserInfoPage.css */
 .user-info-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh; /* Full viewport height */
-    width: 100vw; /* Full viewport width */
-    background: linear-gradient(135deg, #f5f7fa, #c3cfe2); /* Subtle gradient background */
-  }
-  
-  /* Card Styling */
-  .user-info-card {
-    background-color: #ffffff; /* White card background */
-    padding: 30px;
-    border-radius: 12px; /* Rounded corners */
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow */
-    width: 100%;
-    max-width: 600px; /* Limit width for responsiveness */
-  }
-  
-  /* Title Styling */
-  .user-info-title {
-    font-size: 2.5rem; /* Large font size for title */
-    font-weight: bold; /* Bold text for title */
-    text-align: center; /* Center align title text */
-    margin-bottom: 20px;
-    background: linear-gradient(135deg, #1890ff, #ff4d4f); /* Gradient text similar to LoginSignupPage title */
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-  
-  /* Loading Text Styling */
-  .loading-text {
-    font-size: 1.5rem; /* Larger font size for loading text */
-    color: #555555; /* Subtle gray color for loading text */
-  }
-  
-  /* Responsive Design for Smaller Screens */
-  @media (max-width: 480px) {
-    .user-info-card {
-      padding: 20px;
-      border-radius: 8px; /* Slightly reduce border radius on small screens */
-      box-shadow: none; /* Remove shadow for minimalistic look on small screens */
-      width: calc(100% - 40px); /* Add some margin on smaller screens */
-      margin-top: auto;
-      margin-bottom: auto;
-      height:auto ;
-  overflow-y:auto ;
-  display:flex ;
-  flex-direction :column ;
-  gap :8 px ;
-  }
-  .user-info-title{
-  font-size :2rem;}
-  
-  }
-  
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.user-info-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.user-info-title {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.decrypt-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.decrypt-input {
+  padding: 0.5rem;
+  border: 1px solid #d9d9d9;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.decrypt-button {
+  padding: 0.5rem 1rem;
+  background-color: #1890ff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.decrypt-button:disabled {
+  background-color: #d9d9d9;
+  cursor: not-allowed;
+}
+
+.error-message {
+  color: #ff4d4f;
+  margin-bottom: 1rem;
+}
+
+.private-key-section {
+  margin-bottom: 2rem;
+}
+
+.private-key-alert {
+  margin-bottom: 1rem;
+}
+
+.private-key-actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+  align-items: flex-start;
+}
+
+.private-key-input {
+  flex: 1;
+}
+
+.ant-alert-description {
+  margin-top: 0.5rem;
+}
