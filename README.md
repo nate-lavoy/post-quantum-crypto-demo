@@ -7,10 +7,33 @@ This project implements quantum-safe cryptography using Open Quantum Safe's [imp
 - Hybrid post-quantum safe encryption using Kyber1024 and RSA KEM
 - Secure handling of employee PII data
 
-## Prerequisites
+## SETUP
 
-- Need to have [liboqs-python](https://github.com/open-quantum-safe/liboqs-python) wrapper in your path
-- Python packages: oqs, cryptography
+- Need to have [liboqs-python](https://github.com/open-quantum-safe/liboqs-python):
+
+### Install and activate a Python virtual environment
+
+Execute in a Terminal/Console/Administrator Command Prompt
+
+```shell
+python3 -m venv venv
+. venv/bin/activate
+python3 -m ensurepip --upgrade
+```
+
+### Install Poetry
+
+Execute in a Terminal/Console/Administrator Command Prompt
+
+```shell
+pip install poetry
+```
+
+### Install project Dependencies
+
+```shell
+poetry install
+```
 
 ## Cryptographic Operations
 
@@ -29,6 +52,8 @@ python3 encrypt.py {plaintext file}
 ```
 
 Encrypts the input file using the reciever's Kyber and RSA public keys for encapsulation, SHAH-256 for hashing and AES-256 for data encryption. Simulates actions performed by the sender of data (who would send back two encapsulated shared secrets: one for RSA and one for Kyber, and the encrypted message).
+
+You can use the included "mock_data.txt" in place of {plaintext file} or use your own file.
 
 ### File Decryption
 

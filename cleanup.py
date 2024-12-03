@@ -29,8 +29,6 @@ def cleanup():
             if os.path.exists(file):
                 os.remove(file)
                 print(f"Removed: {file}")
-            else:
-                print(f"File not found, skipping: {file}")
         except Exception as e:
             print(f"Error removing {file}: {e}")
 
