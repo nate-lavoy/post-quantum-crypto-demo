@@ -28,7 +28,7 @@ This command initializes the workspace and generates two sets of public/private 
 python3 encrypt.py {plaintext file}
 ```
 
-Encrypts the input file using the reciever's Kyber and RSA public keys for encapsulation, SHAH-256 for hashing and AES-256 for data encryption. Simulates actions performed by the sender of data (who would send two encapsulated shared secrets: one for RSA and one for Kyber, and the encrypted message).
+Encrypts the input file using the reciever's Kyber and RSA public keys for encapsulation, SHAH-256 for hashing and AES-256 for data encryption. Simulates actions performed by the sender of data (who would send back two encapsulated shared secrets: one for RSA and one for Kyber, and the encrypted message).
 
 ### File Decryption
 
