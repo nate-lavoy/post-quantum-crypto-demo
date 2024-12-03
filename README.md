@@ -8,7 +8,7 @@ This project implements quantum-safe cryptography using Open Quantum Safe's [imp
 - Secure handling of employee PII data
 - Uses [liboqs-python](https://github.com/open-quantum-safe/liboqs-python) Python wrapper for liboqs
 
-## SETUP
+## Setup
 
 ### Install and activate a Python virtual environment
 
@@ -36,7 +36,7 @@ poetry install
 
 ## Cryptographic Operations
 
-### Initial Setup
+### Initial setup
 
 ```bash
 python3 setup.py
@@ -44,7 +44,7 @@ python3 setup.py
 
 This command initializes the workspace and generates two sets of public/private keypairs, one with Kyber and one with RSA. It simulates actions performed by the receiver of data (who would send the public keys to the sender).
 
-### File Encryption
+### File encryption
 
 ```bash
 python3 encrypt.py {plaintext file}
@@ -54,7 +54,7 @@ Encrypts the input file using the reciever's Kyber and RSA public keys for encap
 
 You can use the included "mock_data.txt" in place of {plaintext file} or use your own file.
 
-### File Decryption
+### File decryption
 
 ```bash
 python3 decrypt.py
