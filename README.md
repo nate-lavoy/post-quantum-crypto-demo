@@ -46,7 +46,8 @@ If liboqs is not already installed on your system, the wrapper will automaticall
 ```bash
 cd hr_portal_backend/hr_portal_backend
 poetry install
-poetry run uvicorn main:app --reload
+poetry shell
+uvicorn hr_portal_backend.app:app --reload
 ```
 
 For Unix-like systems, you may need to set the library path:
