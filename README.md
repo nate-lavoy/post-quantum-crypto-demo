@@ -8,7 +8,49 @@ This project implements quantum-safe cryptography using liboqs, providing secure
 - Secure handling of employee PII data
 - Full-stack implementation with React frontend and FastAPI backend
 
-## Project Structure
+## Prerequisites
+
+- liboqs-python wrapper
+- Python packages: oqs, cryptography
+- Node.js and npm/yarn for frontend
+- Poetry for backend dependency management
+
+## Cryptographic Operations
+#### (Can be run without running the frontend and backend just to check the encryption/decryption)
+
+### Initial Setup
+
+```bash
+python3 setup.py
+```
+
+This command initializes the workspace and generates quantum-safe public/private keypairs.
+
+### File Encryption
+
+```bash
+python3 encrypt.py {plaintext file}
+```
+
+Encrypts the input file using Kyber1024 KEM for key exchange and AES-256 for data encryption.
+
+### File Decryption
+
+```bash
+python3 decrypt.py
+```
+
+Decrypts the encrypted file using the stored keys.
+
+### Cleanup
+
+```bash
+python3 cleanup.py
+```
+
+Removes all generated keys, secrets, and encrypted/decrypted files.
+
+## Full-Stack App Project Structure
 
 ```
 .
@@ -19,13 +61,6 @@ This project implements quantum-safe cryptography using liboqs, providing secure
 ├── setup.py
 └── cleanup.py
 ```
-
-## Prerequisites
-
-- liboqs-python wrapper
-- Python packages: oqs, cryptography
-- Node.js and npm/yarn for frontend
-- Poetry for backend dependency management
 
 ## Backend Setup
 
@@ -229,41 +264,6 @@ The API allows:
     "private_key": str
 }
 ```
-
-## Cryptographic Operations
-#### (Can be run without running the frontend and backend just to check the encryption/decryption)
-
-### Initial Setup
-
-```bash
-python3 setup.py
-```
-
-This command initializes the workspace and generates quantum-safe public/private keypairs.
-
-### File Encryption
-
-```bash
-python3 encrypt.py {plaintext file}
-```
-
-Encrypts the input file using Kyber1024 KEM for key exchange and AES-256 for data encryption.
-
-### File Decryption
-
-```bash
-python3 decrypt.py
-```
-
-Decrypts the encrypted file using the stored keys.
-
-### Cleanup
-
-```bash
-python3 cleanup.py
-```
-
-Removes all generated keys, secrets, and encrypted/decrypted files.
 
 ## Development
 
