@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "post-quantum-encryption"
+version = "1.0.0"
+description = "This project implements hybrid quantum-safe cryptography using liboqs."
+authors = ["Your Name <you@example.com>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.13"
+cryptography = "^44.0.0"
+liboqs-python = { path = "./liboqs-python" }
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
