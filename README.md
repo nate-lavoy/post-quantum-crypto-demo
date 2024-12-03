@@ -1,6 +1,6 @@
 # Post-Quantum Safe PKI Demonstration
 
-This project implements quantum-safe cryptography using liboqs, providing secure encryption for sensitive HR data with post-quantum security guarantees.
+This project implements quantum-safe cryptography using liboqs, providing secure encryption for sensitive HR data with standard state-of-the-art and post-quantum security algorithms.
 
 ## Features
 
@@ -13,7 +13,6 @@ This project implements quantum-safe cryptography using liboqs, providing secure
 - Python packages: oqs, cryptography
 
 ## Cryptographic Operations
-#### (Can be run without running the frontend and backend just to check the encryption/decryption)
 
 ### Initial Setup
 
@@ -21,7 +20,7 @@ This project implements quantum-safe cryptography using liboqs, providing secure
 python3 setup.py
 ```
 
-This command initializes the workspace and generates quantum-safe public/private keypairs.
+This command initializes the workspace and generates two sets of public/private keypairs, one with Kyber and one with RSA. It simulates actions performed by the receiver of data (who would send the public keys to the sender).
 
 ### File Encryption
 
@@ -29,7 +28,7 @@ This command initializes the workspace and generates quantum-safe public/private
 python3 encrypt.py {plaintext file}
 ```
 
-Encrypts the input file using Kyber1024 KEM for key exchange and AES-256 for data encryption.
+Encrypts the input file using the reciever's Kyber and RSA public keys for encapsulation, SHAH-256 for hashing and AES-256 for data encryption. Simulates actions performed by the sender of data (who would send two encapsulated shared secrets: one for RSA and one for Kyber, and the encrypted message).
 
 ### File Decryption
 
@@ -37,7 +36,7 @@ Encrypts the input file using Kyber1024 KEM for key exchange and AES-256 for dat
 python3 decrypt.py
 ```
 
-Decrypts the encrypted file using the stored keys.
+Decrypts the encrypted file using the stored private keys and encapsulated shared secrets. Simulates actions performed by the receiver of data.
 
 ### Cleanup
 
