@@ -1,6 +1,6 @@
 # Post-Quantum Safe PKI Demonstration
 
-This project implements quantum-safe cryptography using liboqs, providing secure encryption for sensitive HR data with standard state-of-the-art and post-quantum security algorithms.
+This project implements quantum-safe cryptography using Open Quantum Safe's [implementation](https://openquantumsafe.org/liboqs/), providing secure encryption for sensitive HR data with standard state-of-the-art and post-quantum security algorithms.
 
 ## Features
 
@@ -9,7 +9,7 @@ This project implements quantum-safe cryptography using liboqs, providing secure
 
 ## Prerequisites
 
-- liboqs-python wrapper
+- Need to have [liboqs-python](https://github.com/open-quantum-safe/liboqs-python) wrapper in your path
 - Python packages: oqs, cryptography
 
 ## Cryptographic Operations
