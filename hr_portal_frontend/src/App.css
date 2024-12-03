@@ -1,0 +1,27 @@
+/* Reset some default browser styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Ensure body takes full width and height */
+html, body, #root {
+  width: 100%;
+  height: 100%;
+}
+
+/* Make sure the app container stretches fully */
+body {
+  display: flex;
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Center content vertically */
+  background: linear-gradient(135deg, #f5f7fa, #c3cfe2); /* Subtle gradient background */
+  font-family: 'Arial', sans-serif; /* Use a clean font */
+}
+
+/* App container styling */
+#root {
+  display: flex;
+  flex-direction: column;
+}

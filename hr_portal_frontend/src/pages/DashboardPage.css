@@ -1,0 +1,87 @@
+/* Dashboard Container */
+.dashboard-container {
+    height: 100vh; /* Full viewport height */
+    background: linear-gradient(135deg, #f5f7fa, #c3cfe2); /* Subtle gradient background */
+  }
+  
+  /* Sidebar Styling */
+  .dashboard-sider {
+    background-color: #001529; /* Ant Design default dark blue color for sider */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  /* Sidebar Logo */
+  .dashboard-logo {
+    color: #ffffff; /* White text for logo */
+    font-size: 1.5rem; /* Slightly larger font size */
+    font-weight: bold; /* Bold text */
+    text-align: center; /* Center the logo text */
+    margin: 20px 0; /* Add spacing around the logo */
+  }
+  
+  /* Menu Styling */
+  .dashboard-menu .ant-menu-item {
+    font-size: 16px; /* Slightly larger font size for menu items */
+  }
+  
+  .dashboard-menu .ant-menu-item a {
+    color: #ffffff; /* White text for menu links */
+  }
+  
+  .dashboard-menu .ant-menu-item-selected {
+    background-color: #1890ff !important; /* Highlight selected menu item with primary blue color */
+  }
+  
+  /* Content Area Styling */
+  .dashboard-content {
+    padding: 40px;
+    background-color: #ffffff; /* White background for content area */
+    border-radius: 12px; /* Rounded corners for content area */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow for content box */
+    margin: auto;
+  }
+  
+  /* Title Styling */
+  .dashboard-title {
+    font-size: 2.5rem; /* Large font size for title */
+    font-weight: bold; /* Bold text for title */
+    text-align: center; /* Center align title text */
+    margin-bottom: 20px;
+    background: linear-gradient(135deg, #1890ff, #ff4d4f); /* Gradient text similar to LoginSignupPage title */
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  /* Description Styling */
+  .dashboard-description {
+    font-size: 1.2rem; /* Larger font size for description text */
+    color: #555555; /* Subtle gray color for description text */
+    text-align: center;
+  }
+  
+  /* Responsive Design for Smaller Screens */
+  @media (max-width: 480px) {
+    .dashboard-content {
+      padding: 20px;
+      border-radius: 8px; /* Slightly reduce border radius on small screens */
+      box-shadow: none; /* Remove shadow for minimalistic look on small screens */
+      width: calc(100% - 40px); /* Add some margin on smaller screens */
+      margin-top: auto;
+      margin-bottom: auto;
+      height: auto;
+      overflow-y: auto;
+      max-height: calc(100vh - 40px);
+      display:flex ;
+  flex-direction :column ;
+  gap :10 px ;
+    
+  }
+  
+  .dashboard-title {
+      font-size :2rem ;
+  }
+  }
+  
