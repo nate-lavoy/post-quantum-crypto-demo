@@ -28,7 +28,7 @@ Execute in a Terminal/Console/Administrator Command Prompt
 pip install poetry
 ```
 
-### Install Project Dependencies
+### Install project dependencies
 
 ```shell
 poetry install
