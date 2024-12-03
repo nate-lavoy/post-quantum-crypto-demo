@@ -6,10 +6,9 @@ This project implements quantum-safe cryptography using Open Quantum Safe's [imp
 
 - Hybrid post-quantum safe encryption using Kyber1024 and RSA KEM
 - Secure handling of employee PII data
+- Uses [liboqs-python](https://github.com/open-quantum-safe/liboqs-python) Python wrapper for liboqs
 
 ## SETUP
-
-- Need to have [liboqs-python](https://github.com/open-quantum-safe/liboqs-python):
 
 ### Install and activate a Python virtual environment
 
@@ -29,7 +28,7 @@ Execute in a Terminal/Console/Administrator Command Prompt
 pip install poetry
 ```
 
-### Install project Dependencies
+### Install Project Dependencies
 
 ```shell
 poetry install
