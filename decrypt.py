@@ -1,4 +1,4 @@
-# decrypt.py
+# simulates receiver decrypting data with private keys
 from cryptography.hazmat.primitives.ciphers import Cipher, algorithms, modes
 from cryptography.hazmat.primitives.asymmetric import rsa, padding
 from cryptography.hazmat.primitives import hashes, serialization

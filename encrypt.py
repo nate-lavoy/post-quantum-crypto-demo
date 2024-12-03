@@ -1,4 +1,4 @@
-# encrypt.py
+# Simulates sender encrypting data with receiver's public keys
 from cryptography.hazmat.primitives.ciphers import Cipher, algorithms, modes
 from cryptography.hazmat.primitives.asymmetric import padding
 from cryptography.hazmat.primitives import hashes, serialization
