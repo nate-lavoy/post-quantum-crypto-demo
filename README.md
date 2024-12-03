@@ -44,7 +44,7 @@ If liboqs is not already installed on your system, the wrapper will automaticall
 ### Setup Backend Application (path from root)
 
 ```bash
-cd hr_portal_backend/hr_portal_backend
+cd hr_portal_backend
 poetry install
 poetry shell
 uvicorn hr_portal_backend.app:app --reload
