@@ -3,3 +3,4 @@ venv
 liboqs-python
 *.encrypted
 *.decrypted
+.DS_Store
