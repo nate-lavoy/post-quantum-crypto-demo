@@ -3,4 +3,7 @@ venv
 liboqs-python
 *.encrypted
 *.decrypted
+*ciphertext.bin
 .DS_Store
+*private_key.*
+*public_key.*
