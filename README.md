@@ -16,7 +16,7 @@ Execute in a Terminal/Console/Administrator Command Prompt
 
 ```shell
 python3 -m venv venv
-. venv/bin/activate
+source venv/bin/activate
 python3 -m ensurepip --upgrade
 ```
 
